@@ -1,0 +1,4 @@
+[env]
+# mupdf's Makefile passes an @response-file to `ar` under GNU Make >= 4.0,
+# which Apple's BSD ar rejects. Disable that path so Homebrew make works on macOS.
+MAKEFLAGS = "USE_ARGUMENT_FILE=no"
